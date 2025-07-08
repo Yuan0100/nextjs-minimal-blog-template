@@ -1,0 +1,215 @@
+// MarkdownRenderer 樣式
+.markdownRenderer {
+  max-width: none;
+  line-height: 1.75;
+  color: #1f2937;
+
+  // 標題樣式
+  .h1 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+  }
+
+  .h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .h4 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .h6 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: #6b7280;
+  }
+
+  // 段落樣式
+  .paragraph {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+    color: #1f2937;
+  }
+
+  // 連結樣式
+  .link {
+    color: #2563eb;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #1d4ed8;
+    }
+  }
+
+  // 列表樣式
+  .unorderedList {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+
+    .listItem {
+      margin-bottom: 0.25rem;
+      color: #1f2937;
+      line-height: 1.75;
+    }
+  }
+
+  .orderedList {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: decimal;
+
+    .listItem {
+      margin-bottom: 0.25rem;
+      color: #1f2937;
+      line-height: 1.75;
+    }
+  }
+
+  // 引用樣式
+  .blockquote {
+    border-left: 4px solid #93c5fd;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin: 1rem 0;
+    background-color: #eff6ff;
+    font-style: italic;
+    color: #374151;
+  }
+
+  // 程式碼樣式
+  .inlineCode {
+    background-color: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    color: #dc2626;
+  }
+
+  .codeBlock {
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+
+    code {
+      display: block;
+    }
+  }
+
+  // Shiki 代碼塊樣式
+  .shikiCodeBlock {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+
+    pre {
+      margin: 0;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    }
+  }
+
+  // 表格樣式
+  .tableWrapper {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+
+  .table {
+    min-width: 100%;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    border-collapse: collapse;
+  }
+
+  .tableHead {
+    background-color: #f9fafb;
+  }
+
+  .tableBody {
+    tr {
+      border-top: 1px solid #e5e7eb;
+
+      &:hover {
+        background-color: #f9fafb;
+      }
+    }
+  }
+
+  .tableHeaderCell {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .tableCell {
+    padding: 0.5rem 1rem;
+    color: #1f2937;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  // 分隔線樣式
+  .horizontalRule {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid #d1d5db;
+  }
+
+  // 圖片樣式
+  .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    display: block;
+  }
+
+  // 刪除線樣式
+  .strikethrough {
+    color: #6b7280;
+    text-decoration: line-through;
+  }
+}
