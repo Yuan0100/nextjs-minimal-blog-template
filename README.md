@@ -1,17 +1,17 @@
-# Next.js Blog Template
+# Next.js Minimal Blog Template
 
-A modern, fully-featured blog template built with Next.js 15, TypeScript, and SCSS modules.
+A clean, minimal blog template built with Next.js 15, TypeScript, and SCSS modules. Perfect for developers who want a simple starting point for their blog.
 
 ## ✨ Features
 
 - **Next.js 15** with App Router
 - **TypeScript** for type safety  
-- **SCSS Modules** for styling
+- **SCSS Modules** for component-scoped styling
 - **MDX Support** - Write content in Markdown or MDX
 - **Syntax Highlighting** with Shiki
 - **Dynamic Routing** for blog posts
 - **Static Generation** for optimal performance
-- **Responsive Design** with mobile-first approach
+- **Minimal Components** - Easy to customize and extend
 - **SEO Optimized** with metadata generation
 
 ## 🚀 Quick Start
