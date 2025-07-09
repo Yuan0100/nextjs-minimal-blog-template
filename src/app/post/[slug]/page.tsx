@@ -2,6 +2,9 @@ import { getAllPostSlugs, getPostBySlug } from "../utils";
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 import MarkdownRenderer from '@/app/components/MarkdownRenderer';
+import Header from '@/app/components/Header';
+import Link from 'next/link';
+import styles from './page.module.scss';
 
 type Props = {
   params: Promise<{
@@ -46,35 +49,45 @@ export default async function PostPage({ params }: Props) {
   }
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-8">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-        {post.description && (
-          <p className="text-xl text-gray-600 mb-4">{post.description}</p>
-        )}
-        {post.date && (
-          <time className="text-sm text-gray-500" dateTime={post.date}>
-            {new Date(post.date).toLocaleDateString('zh-TW')}
-          </time>
-        )}
-        {post.tags && post.tags.length > 0 && (
-          <div className="flex gap-2 mt-4">
-            {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </header>
+    <div className={styles.page}>
+      <Header />
+      <main className={styles.main}>
+        <div className={styles.container}>
+          <nav className={styles.breadcrumb}>
+            <Link href="/post">← Back to Posts</Link>
+          </nav>
 
-      <MarkdownRenderer 
-        content={post.content}
-      />
-    </article>
+          <article className={styles.article}>
+            <header className={styles.header}>
+              <h1 className={styles.title}>{post.title}</h1>
+              {post.description && (
+                <p className={styles.description}>{post.description}</p>
+              )}
+              <div className={styles.meta}>
+                {post.date && (
+                  <time className={styles.date} dateTime={post.date}>
+                    {new Date(post.date).toLocaleDateString('zh-TW')}
+                  </time>
+                )}
+                {post.tags && post.tags.length > 0 && (
+                  <div className={styles.tags}>
+                    {post.tags.map((tag) => (
+                      <span key={tag} className={styles.tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </header>
+
+            <div className={styles.content}>
+              <MarkdownRenderer content={post.content} />
+            </div>
+          </article>
+        </div>
+      </main>
+    </div>
   );
 }
 

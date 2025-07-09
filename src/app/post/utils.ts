@@ -102,6 +102,24 @@ export function getAllPostsMetadata(): PostMetadata[] {
 }
 
 /**
+ * 獲取所有文章的完整資料
+ */
+export function getAllPosts(): Post[] {
+  const slugs = getAllPostSlugs();
+  const posts = slugs
+    .map(slug => getPostBySlug(slug))
+    .filter((post): post is Post => post !== null);
+
+  // 按日期排序（最新的在前）
+  return posts.sort((a, b) => {
+    if (!a.date && !b.date) return 0;
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+}
+
+/**
  * 根據標籤篩選文章
  */
 export function getPostsByTag(tag: string): PostMetadata[] {

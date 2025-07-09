@@ -3,7 +3,7 @@
 .header {
   padding: var(--spacing-l) var(--spacing-xl);
   border-bottom: 1px solid var(--gray-alpha-200);
-  
+
   @include breakpoints.mobile {
     padding: var(--spacing-m) var(--spacing-l);
   }
@@ -12,11 +12,11 @@
 .title {
   font-size: var(--font-size-l);
   font-weight: bold;
-  
+
   a {
     text-decoration: none;
     color: var(--foreground);
-    
+
     &:hover {
       opacity: 0.8;
     }
