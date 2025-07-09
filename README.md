@@ -2,6 +2,30 @@
 
 A clean, minimal blog template built with Next.js 15, TypeScript, and SCSS modules. Perfect for developers who want a simple starting point for their blog.
 
+## 🚀 **Quick Start**
+
+### Option 1: Use GitHub Template (Recommended)
+1. Click "Use this template" button on GitHub
+2. Create your new repository
+3. Clone and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/your-blog-name.git
+cd your-blog-name
+pnpm install
+pnpm dev
+```
+
+### Option 2: Manual Setup
+```bash
+git clone https://github.com/yourusername/nextjs-minimal-blog-template.git
+cd nextjs-minimal-blog-template
+pnpm install
+pnpm dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see your blog.
+
 ## ✨ Features
 
 - **Next.js 15** with App Router
@@ -14,16 +38,7 @@ A clean, minimal blog template built with Next.js 15, TypeScript, and SCSS modul
 - **Minimal Components** - Easy to customize and extend
 - **SEO Optimized** with metadata generation
 
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18+ 
-- pnpm (recommended) or npm
-
-### Installation
-
-```bash
+## � Project Structure
 # Clone this template
 git clone <your-repo-url>
 cd nextjs-blog-template

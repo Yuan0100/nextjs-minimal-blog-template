@@ -1,7 +1,27 @@
 {
-  "name": "uanuanshi-blog",
-  "version": "0.1.0",
-  "private": true,
+  "name": "nextjs-minimal-blog-template",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A minimal blog template built with Next.js 15, TypeScript, and SCSS modules",
+  "keywords": [
+    "nextjs",
+    "blog",
+    "template",
+    "typescript",
+    "scss",
+    "mdx",
+    "minimal"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nextjs-minimal-blog-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/nextjs-minimal-blog-template/issues"
+  },
+  "homepage": "https://github.com/yourusername/nextjs-minimal-blog-template#readme",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
